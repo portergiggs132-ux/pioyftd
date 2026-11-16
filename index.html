@@ -1,0 +1,2810 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Raihan</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- EmailJS SDK -->
+<script
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js">
+</script>
+
+<!-- Initialize EmailJS -->
+<script>
+  emailjs.init({
+    publicKey: "PNJnyzYatsTxj2r2q"
+  });
+</script>
+  
+  <!-- Favicons -->
+  <link href="assets/img/logoku.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+   <link href="animscroll.css" rel="stylesheet">
+   <script src="animscroll.js"></script>
+
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <body>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  body {
+    background: #000;
+    min-height: 300vh;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 80px 24px 200px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .content h1 {
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    background: linear-gradient(180deg, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .content h2 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 40px 0 16px;
+    color: #fff;
+    border-left: 2px solid #fff;
+    padding-left: 12px;
+  }
+
+  .content p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* ============ RADIAL NAVBAR ============ */
+  .radial-nav {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    z-index: 100;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.5s ease;
+    opacity: 1;
+  }
+
+  .radial-nav.hidden {
+    transform: translateX(-50%) translateY(150px);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-toggle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 
+      0 0 0 0 rgba(255,255,255,0.3),
+      0 0 20px rgba(255,255,255,0.1),
+      inset 0 0 15px rgba(255,255,255,0.05);
+  }
+
+  .nav-toggle:hover {
+    box-shadow: 
+      0 0 30px rgba(255,255,255,0.4),
+      0 0 60px rgba(255,255,255,0.2),
+      inset 0 0 15px rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.4);
+  }
+
+  .nav-toggle.active {
+    background: #fff;
+    color: #000;
+    transform: rotate(135deg);
+    box-shadow: 
+      0 0 40px rgba(255,255,255,0.6),
+      0 0 80px rgba(255,255,255,0.3);
+  }
+
+  .nav-toggle svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.4s ease;
+  }
+
+  .nav-item {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    bottom: 8px;
+    left: 8px;
+    opacity: 0;
+    transform: scale(0.3);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 
+      0 0 15px rgba(255,255,255,0.08),
+      inset 0 0 10px rgba(255,255,255,0.03);
+  }
+
+  .nav-item svg {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-item::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: #888;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .nav-item:hover {
+    border-color: rgba(255,255,255,0.5);
+    background: #1a1a1a;
+    box-shadow: 
+      0 0 25px rgba(255,255,255,0.5),
+      0 0 50px rgba(255,255,255,0.2),
+      inset 0 0 15px rgba(255,255,255,0.08);
+  }
+
+  .nav-item:hover::after {
+    opacity: 1;
+    color: #fff;
+  }
+
+  .nav-item:hover svg {
+    filter: drop-shadow(0 0 6px #fff);
+  }
+
+  .radial-nav.open .nav-item {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .pulse-ring {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .radial-nav.open .pulse-ring {
+    animation: pulse 1.5s ease-out infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      width: 64px;
+      height: 64px;
+      opacity: 0.6;
+    }
+    100% {
+      width: 220px;
+      height: 220px;
+      opacity: 0;
+    }
+  }
+
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 50;
+  }
+
+  .backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .scroll-hint {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: #555;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+  }
+
+  @media (max-width: 480px) {
+    .radial-nav {
+      bottom: 24px;
+    }
+    .nav-toggle {
+      width: 56px;
+      height: 56px;
+    }
+    .nav-item {
+      width: 42px;
+      height: 42px;
+    }
+    .nav-item svg {
+      width: 18px;
+      height: 18px;
+    }
+    .content h1 {
+      font-size: 22px;
+    }
+  }
+</style>
+</head>
+<body>
+
+
+<div class="backdrop" id="backdrop"></div>
+
+
+<nav class="radial-nav" id="radialNav">
+  <div class="pulse-ring"></div>
+  
+  <!-- 
+    data-label  = teks yang tampil sebagai tooltip
+    data-target = id section yang dituju saat diklik
+  -->
+  <div class="nav-item" data-label="Home" data-target="heros" data-index="0">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 12l9-9 9 9"/>
+      <path d="M5 10v10h14V10"/>
+    </svg>
+  </div>
+  <div class="nav-item" data-label="About" data-target="section-about" data-index="1">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 8v.01M11 12h1v4h1"/>
+    </svg>
+  </div>
+  <div class="nav-item" data-label="Resume" data-target="res" data-index="2">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+      <path d="M14 2v6h6M8 13h8M8 17h8M8 9h2"/>
+    </svg>
+  </div>
+  <div class="nav-item" data-label="Projects" data-target="portfolio" data-index="3">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="7" height="7"/>
+      <rect x="14" y="3" width="7" height="7"/>
+      <rect x="3" y="14" width="7" height="7"/>
+      <rect x="14" y="14" width="7" height="7"/>
+    </svg>
+  </div>
+  <div class="nav-item" data-label="Service" data-target="services" data-index="4">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="7" width="20" height="14" rx="2"/>
+      <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+    </svg>
+  </div>
+  <div class="nav-item" data-label="Contact" data-target="contact" data-index="5">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <path d="M22 6l-10 7L2 6"/>
+    </svg>
+  </div>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <path d="M12 5v14M5 12h14"/>
+    </svg>
+  </button>
+</nav>
+
+<script>
+  const nav = document.getElementById('radialNav');
+  const toggle = document.getElementById('navToggle');
+  const backdrop = document.getElementById('backdrop');
+  const items = document.querySelectorAll('.nav-item');
+  const scrollHint = document.getElementById('scrollHint');
+
+  const RADIUS = 130;
+  const START_ANGLE = 180;
+  const END_ANGLE = 360;
+  const COUNT = items.length;
+
+  function positionItems() {
+    const step = (END_ANGLE - START_ANGLE) / (COUNT - 1);
+    items.forEach((item, i) => {
+      const angle = START_ANGLE + step * i;
+      const rad = (angle * Math.PI) / 180;
+      const x = Math.cos(rad) * RADIUS;
+      const y = Math.sin(rad) * RADIUS;
+      item.dataset.tx = x;
+      item.dataset.ty = y;
+    });
+  }
+
+  function openMenu() {
+    nav.classList.add('open');
+    toggle.classList.add('active');
+    backdrop.classList.add('active');
+    
+    items.forEach((item, i) => {
+      item.style.transitionDelay = `${i * 0.06}s`;
+      item.style.transform = `translate(${item.dataset.tx}px, ${item.dataset.ty}px) scale(1)`;
+      item.style.opacity = '1';
+    });
+  }
+
+  function closeMenu() {
+    nav.classList.remove('open');
+    toggle.classList.remove('active');
+    backdrop.classList.remove('active');
+    
+    items.forEach((item, i) => {
+      item.style.transitionDelay = `${(COUNT - 1 - i) * 0.04}s`;
+      item.style.transform = 'translate(0, 0) scale(0.3)';
+      item.style.opacity = '0';
+    });
+  }
+
+  toggle.addEventListener('click', () => {
+    if (nav.classList.contains('open')) {
+      closeMenu();
+    } else {
+      positionItems();
+      openMenu();
+    }
+  });
+
+  backdrop.addEventListener('click', closeMenu);
+
+  // ============ KLIK ITEM ============
+  // Sekarang menggunakan data-target, BUKAN data-label
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const targetId = item.dataset.target; // ambil dari data-target
+      const label = item.dataset.label;     // hanya untuk log
+      console.log(`Navigate: "${label}" → #${targetId}`);
+      
+      item.style.boxShadow = '0 0 40px #fff, 0 0 80px rgba(255,255,255,0.5)';
+      setTimeout(() => {
+        item.style.boxShadow = '';
+        closeMenu();
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          console.warn(`Section dengan id="${targetId}" tidak ditemukan`);
+        }
+      }, 300);
+    });
+  });
+
+  positionItems();
+
+  // ============ SCROLL HIDE/SHOW ============
+  let scrollTimer = null;
+  let isScrolling = false;
+  const SCROLL_DELAY = 400;
+
+  function onScrollStart() {
+    if (!isScrolling) {
+      isScrolling = true;
+      nav.classList.add('hidden');
+      if (nav.classList.contains('open')) closeMenu();
+      if (scrollHint) scrollHint.style.opacity = '0';
+    }
+  }
+
+  function onScrollStop() {
+    isScrolling = false;
+    nav.classList.remove('hidden');
+  }
+
+  window.addEventListener('scroll', () => {
+    onScrollStart();
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      onScrollStop();
+    }, SCROLL_DELAY);
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    if (nav.classList.contains('open')) {
+      positionItems();
+      items.forEach(item => {
+        item.style.transform = `translate(${item.dataset.tx}px, ${item.dataset.ty}px) scale(1)`;
+      });
+    }
+  });
+        </script>
+    
+  
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* ===== SINGLE LOADING SCREEN CONTAINER ===== */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            z-index: 99999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #loading-screen.done {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* ===== PHASE 1: SIGNATURE ===== */
+        .phase-signature {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease;
+        }
+
+        .phase-signature.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .signature-container {
+            width: 420px;
+            height: 180px;
+            margin-bottom: 50px;
+        }
+
+        .signature-container svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .signature-path {
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1200;
+            stroke-dashoffset: 1200;
+            animation: drawSignature 8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85))
+                    drop-shadow(0 0 14px rgba(255, 255, 255, 0.4));
+        }
+
+        .signature-dot {
+            fill: #ffffff;
+            opacity: 0;
+            animation: showDot 0.5s ease forwards;
+            animation-delay: 7.5s;
+            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9))
+                    drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+        }
+
+        @keyframes drawSignature {
+            to { stroke-dashoffset: 0; }
+        }
+
+        @keyframes showDot {
+            from { opacity: 0; transform: scale(0); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        .progress-container {
+            width: 200px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.12);
+            position: relative;
+            margin-bottom: 16px;
+            overflow: visible;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #ffffff;
+            width: 0%;
+            position: relative;
+            animation: loadProgress 8s ease-in-out forwards;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+                        0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.8),
+                        0 0 24px 8px rgba(255, 255, 255, 0.4);
+        }
+
+        @keyframes loadProgress {
+            0%   { width: 0%; }
+            20%  { width: 15%; }
+            40%  { width: 35%; }
+            60%  { width: 60%; }
+            80%  { width: 85%; }
+            100% { width: 100%; }
+        }
+
+        .loading-text {
+            font-family: 'Georgia', serif;
+            font-size: 10px;
+            letter-spacing: 6px;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            animation: textPulse 2s ease-in-out infinite;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes textPulse {
+            0%, 100% { opacity: 0.3; }
+            50%      { opacity: 0.8; }
+        }
+
+        /* ===== PHASE 2: VIDEO ===== */
+        .phase-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            pointer-events: none;
+        }
+
+        .phase-video.show {
+            opacity: 1;
+        }
+
+        .phase-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ===== MAIN CONTENT DENGAN ANIMASI SLIDE-UP ===== */
+        #main-content {
+            position: relative;
+            z-index: 1;
+            padding: 50px;
+            color: #333;
+            font-family: Arial, sans-serif;
+            min-height: 200vh;
+            
+            /* Initial state: tersembunyi dan di bawah */
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* State setelah animasi: terlihat dan di posisi normal */
+        #main-content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="no-scroll">
+
+    <!-- ===== SINGLE LOADING SCREEN ===== -->
+    <div id="loading-screen">
+
+        <!-- Phase 1: Signature -->
+        <div class="phase-signature" id="phase-signature">
+            <div class="signature-container">
+                <svg viewBox="0 0 420 180" xmlns="http://www.w3.org/2000/svg">
+                    <path class="signature-path" d="
+                        M 84,134
+                        C 74,126 78,108 98,100
+                        C 134,84 176,56 206,60
+                        C 228,63 232,84 210,96
+                        C 192,106 164,107 142,104
+                        L 134,103
+                        C 138,94 147,92 151,100
+                        C 155,107 160,107 164,100
+                        C 168,92 177,92 181,100
+                        C 185,107 190,107 194,100
+                        C 198,92 207,92 211,100
+                        L 215,100
+                        C 219,93 224,93 226,100
+                        L 219,146
+                        L 230,106
+                        C 234,99 239,97 243,99
+                        L 362,90
+                        C 371,90 378,89 385,88
+                    " />
+                    <circle class="signature-dot" cx="396" cy="86" r="2" />
+                </svg>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <div class="loading-text">Loading...</div>
+        </div>
+
+        <!-- Phase 2: Video -->
+        <div class="phase-video" id="phase-video">
+            <video id="loading-video" muted playsinline>
+                <source src="assets/67.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+
+
+    <script>
+        // Setup signature path length
+        const path = document.querySelector('.signature-path');
+        const len = path.getTotalLength();
+        path.style.strokeDasharray = len;
+        path.style.strokeDashoffset = len;
+
+        // Elements
+        const loadingScreen = document.getElementById('loading-screen');
+        const phaseSignature = document.getElementById('phase-signature');
+        const phaseVideo = document.getElementById('phase-video');
+        const mainContent = document.getElementById('main-content');
+        const video = document.getElementById('loading-video');
+
+        // ===== TRANSISI SIGNATURE → VIDEO =====
+        setTimeout(() => {
+            phaseSignature.classList.add('hide');
+            phaseVideo.classList.add('show');
+            video.play().catch(e => console.log('Autoplay prevented:', e));
+        }, 8000);
+
+// ===== TUTUP LOADING SCREEN + ANIMASI SECTION =====
+setTimeout(() => {
+    // 1. Fade out loading screen
+    loadingScreen.classList.add('done');
+    video.pause();
+
+    // 2. Unlock scroll
+    document.body.classList.remove('no-scroll');
+    void document.body.offsetHeight; // Force reflow
+
+    // 3. Trigger animasi slide-up berurutan (Staggered)
+    const revealSections = document.querySelectorAll('.reveal');
+    
+    revealSections.forEach((section, index) => {
+        setTimeout(() => {
+            section.classList.add('visible');
+        }, 300 + (index * 150)); 
+        // ^ 400ms delay awal (tunggu loading screen mulai fade out)
+        // ^ +200ms untuk setiap section berikutnya
+    });
+
+    // 4. Hapus loading screen dari DOM setelah fade out selesai
+    setTimeout(() => {
+        loadingScreen.style.display = 'none';
+    }, 1200);
+
+}, 10400); // 8s signature + 2s video
+    </script>
+
+  
+<style>
+
+/* ===== ANIMASI SLIDE-UP UNTUK SECTION ===== */
+/* ===== ANIMASI SLIDE-UP PREMIUM ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px); /* Mulai 100px di bawah (lebih dramatis) */
+    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+                transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0); /* Naik ke posisi normal */
+}
+
+  /* 1. Definisi Gerakan (Keyframes) */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px); /* Bergerak ke atas 15px (bisa diubah sesuai selera) */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* 2. Class untuk menerapkan animasi */
+.animate-float {
+    animation: floatUpDown 3s ease-in-out infinite;
+    /* 
+       Penjelasan:
+       - 3s       : Durasi satu siklus gerakan (semakin besar, semakin lambat/halus)
+       - ease-in-out: Membuat gerakan melambat di ujung atas dan bawah (sangat halus)
+       - infinite : Mengulang gerakan selamanya
+    */
+}
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+
+        .portfolio-opener {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #openerGlowCanvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1;
+        }
+
+        .opener-vignette {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.7) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .opener-scanlines {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                0deg, transparent, transparent 2px,
+                rgba(255, 255, 255, 0.02) 2px, rgba(255, 255, 255, 0.02) 4px
+            );
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .opener-content {
+            position: relative;
+            z-index: 4;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .opener-subtitle {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+            opacity: 0;
+            animation: openerFadeInUp 1s ease 0.5s forwards;
+        }
+
+        .opener-subtitle span {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .opener-main-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .opener-portfolio-text {
+            font-size: clamp(60px, 10vw, 120px);
+            font-weight: 900;
+            letter-spacing: -2px;
+            margin: 0;
+            opacity: 0;
+            animation: openerFadeInScale 1.2s ease 0.3s forwards; 
+        }
+
+        .glow-part {
+            display: inline-block;
+            color: #333333;
+        }
+
+        .part-port {
+            animation: switchPort 4s step-end 1.5s infinite;
+        }
+
+        .part-folio {
+            animation: switchFolio 4s step-end 1.5s infinite;
+        }
+
+        @keyframes switchPort {
+            0%, 49.99% {
+                color: #ffffff;
+                text-shadow: 
+                    0 0 10px rgba(255, 255, 255, 0.9),
+                    0 0 25px rgba(255, 255, 255, 0.5),
+                    0 0 50px rgba(255, 255, 255, 0.2);
+            }
+            50%, 100% {
+                color: #333333;
+                text-shadow: none;
+            }
+        }
+
+        @keyframes switchFolio {
+            0%, 49.99% {
+                color: #333333;
+                text-shadow: none;
+            }
+            50%, 100% {
+                color: #ffffff;
+                text-shadow: 
+                    0 0 10px rgba(255, 255, 255, 0.9),
+                    0 0 25px rgba(255, 255, 255, 0.5),
+                    0 0 50px rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        .opener-year-text {
+            font-family: 'Raleway';
+            font-size: clamp(50px, 8vw, 100px);
+            font-weight: 400;
+            color: #fff;
+            margin: 0;
+            opacity: 0;
+            animation: openerFadeInScale 1.2s ease 0.5s forwards;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.15); 
+        }
+
+        .opener-categories {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: openerFadeInUp 1s ease 1s forwards;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .opener-category {
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+            position: relative;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .opener-category::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 0; height: 1px;
+            background: #fff;
+            transition: width 0.3s ease;
+        }
+
+        .opener-category:hover { color: #fff; }
+        .opener-category:hover::after { width: 100%; }
+
+        @keyframes openerFadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes openerFadeInScale {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+
+</head>
+<body>
+
+    <section class="portfolio-opener reveal from-up" id="portfolioOpener">
+        <canvas id="openerGlowCanvas"></canvas>
+        <div class="opener-vignette"></div>
+        <div class="opener-scanlines"></div>
+        
+        <div class="opener-content">
+            <div class="opener-subtitle animate-float">
+                <span>SELECTED</span> - SCROLL TO EXPLORE
+            </div>
+            
+            <div class="opener-main-title animate-float">
+                <h1 class="opener-portfolio-text">
+                    <span class="glow-part part-port animate-float">PORTO</span><span class="glow-part part-folio animate-float">FOLIO</span>
+                </h1>
+                <h2 class="opener-year-text"></h2>
+            </div>
+            
+            <div class="opener-categories">
+                <div class="opener-category">DESIGN -</div>
+                <div class="opener-category">BRANDING</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    (function() {
+        const canvas = document.getElementById('openerGlowCanvas');
+        if (!canvas) return; 
+        
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let time = 0;
+        let animationId;
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+
+        class GlowArc {
+            constructor(yPosition, radius, speed, opacity, thickness, arcLength) {
+                this.yPosition = yPosition;
+                this.radius = radius;
+                this.speed = speed;
+                this.opacity = opacity;
+                this.thickness = thickness;
+                this.arcLength = arcLength; // Panjang busur (dalam radian)
+                this.angle = Math.random() * Math.PI * 2;
+            }
+
+            draw() {
+                const centerX = width / 2;
+                const centerY = this.yPosition;
+
+                const gradient = ctx.createRadialGradient(
+                    centerX, centerY, 0,
+                    centerX, centerY, this.radius * 1.3
+                );
+                gradient.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
+                gradient.addColorStop(0.6, `rgba(255, 255, 255, ${this.opacity * 0.4})`);
+                gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, this.radius, this.angle, this.angle + this.arcLength);
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = this.thickness;
+                ctx.lineCap = 'round';
+                
+                ctx.shadowBlur = 20;
+                ctx.shadowColor = `rgba(255, 255, 255, ${this.opacity * 0.6})`;
+                ctx.stroke();
+                ctx.shadowBlur = 0;
+
+                this.angle += this.speed;
+            }
+        }
+
+        // ARC YANG DIPERBAIKI: Lebih kecil, lebih lambat, lebih tipis
+        const arcs = [
+            // Arc atas - kecil dan lambat
+            new GlowArc(height * 0.2, width * 0.18, 0.003, 0.5, 1.5, Math.PI * 0.6),
+            // Arc atas - sedikit lebih besar
+            new GlowArc(height * 0.15, width * 0.22, 0.002, 0.3, 1, Math.PI * 0.4),
+            // Arc bawah - kecil dan lambat
+            new GlowArc(height * 0.8, width * 0.18, -0.003, 0.5, 1.5, Math.PI * 0.6),
+            // Arc bawah - sedikit lebih besar
+            new GlowArc(height * 0.85, width * 0.22, -0.002, 0.3, 1, Math.PI * 0.4),
+            // Arc samping kiri - sangat tipis
+            new GlowArc(height * 0.5, width * 0.25, 0.0015, 0.2, 0.8, Math.PI * 0.3),
+            // Arc samping kanan - sangat tipis
+            new GlowArc(height * 0.5, width * 0.25, -0.0015, 0.2, 0.8, Math.PI * 0.3),
+        ];
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 1.5;
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.speedY = (Math.random() - 0.5) * 0.3;
+                this.opacity = Math.random() * 0.3;
+                this.life = Math.random() * 150;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.life--;
+                if (this.life <= 0 || this.x < 0 || this.x > width || this.y < 0 || this.y > heigh
+                    </script>
+    
+<!-- Hero Section (Redesigned) -->
+ <style>
+/* ===== BASE: Section tersembunyi ===== */
+.reveal {
+    opacity: 0;
+    will-change: opacity, transform;
+    /* Transisi berlaku saat masuk DAN keluar viewport */
+    transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ===== Arah Awal ===== */
+.from-up    { transform: translateY(80px); }
+.from-left  { transform: translateX(-80px); }
+.from-right { transform: translateX(80px); }
+
+/* ===== State: Section masuk layar ===== */
+.reveal.in-view {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+    </style>
+    <section id="heros" class="hero section modern-hero">
+      <!-- Background Image -->
+      <img src="assets/img/sat.jpeg" alt="Background" class="hero-bg-img">
+      
+      <!-- Animated Glow Effect -->
+      <div class="hero-glow-effect"></div>
+
+      <div class="container" data-aos="zoom-out">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+      
+<!-- Glassmorphism Card -->
+            <div class="hero-glass-card anim slide-down">
+              <div class="hero-badge">Welcome</div>
+              <h2 class="hero-title animate-on-load anim-fade-up delay-3">MUHAMMAD RAYHAN PAMUNGKAS</h2>
+              <p class="hero-subtitle animate-on-load anim-fade-up delay-4">I am <span class="typed" data-typed-items="Sport Designer, Scout, Content Creator, Ordinaryman"></span><span class="typed-cursor typed-cursor--blink">|</span></p>
+              <div class="profile-container">
+ <div class="hero-section">
+
+  <div class="profile-wrapper animate-on-load anim-scale-in delay-2">
+    <div class="profile-circle animate-on-load anim-scale-in delay-2">
+      <img src="assets/img/ex.jpg" alt="Profile">
+    </div>
+  </div>
+</div>
+              <div class="social-links animate-on-load anim-fade-up delay-5">
+                <a href="https://www.behance.net/raihandesign1/" target="_blank" title="Behance"><i class="bi bi-behance anim slide-left"></i></a>
+                <a href="https://www.instagram.com/raihan.design_/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://wa.me/6285855444927" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp anim slide-right"></i></a>
+              </div>
+
+              <div class="hero-cta-buttons">
+                <a href="#portfolio" class="btn-glow anim slide-left">See My Projects</a>
+                <a href="#contact" class="btn-outline anim slide-right">Contact Me</a>
+              </div>
+            </div>
+            <!-- End Glassmorphism Card -->
+            
+          </div>
+          <!-- End col-lg-10 -->
+        </div>
+        <!-- End row -->
+      </div>
+      <!-- End container -->
+    </section>
+    <!-- /Hero Section -->
+
+    <!-- Modern Stats Section -->
+    <section id="stats-modern" class="stats-modern section">
+      <div class="container">
+        <div class="row gy-4 justify-content-center">
+          
+          <!-- Stat Item 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-card animate-float delay-1">
+              <div class="stat-icon anim slide-right">
+                <i class="bi bi-folder-check"></i>
+              </div>
+              <div class="stat-content anim slide-left">
+                <h3 class="stat-number">110+</h3>
+                <p class="stat-label">Project Completed</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Item 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-card animate-float delay-2">
+              <div class="stat-icon anim fade-in">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <div class="stat-content anik fade-in">
+                <h3 class="stat-number">1+</h3>
+                <p class="stat-label">Year Experience</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Item 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-card animate-float delay-3">
+              <div class="stat-icon anim slide-left">
+                <i class="bi bi-emoji-smile"></i>
+              </div>
+              <div class="stat-content anim slide-right">
+                <h3 class="stat-number">10+</h3>
+                <p class="stat-label">Personal Clients</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /Modern Stats Section -->
+  
+    
+<style>
+    /* ====== RESET & BASE DARK MODE ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: #0a0a0c; /* Warna background utama dark mode */
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ====== DUMMY SECTIONS (Hanya untuk demo) ====== */
+    .dummy-section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .dummy-section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      opacity: 0.5;
+    }
+    .dummy-section p {
+      margin-top: 10px;
+      opacity: 0.3;
+    }
+
+    /* ====== MARQUEE SECTION (INTI KODE) ====== */
+    .marquee-dark {
+      --bg: #0a0a0c;
+      --text-main: rgba(179, 169, 169, 0.205); /* Teks sangat transparan */
+      --text-accent: rgba(250, 250, 250, 0.938); /* Teks sedikit lebih terang */
+      
+      background: var(--bg);
+      padding: clamp(40px, 6vw, 80px) 0;
+      overflow: hidden;
+      user-select: none;
+      
+      /* Efek fade di kiri dan kanan */
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+              mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-left 25s linear infinite;
+    }
+
+    /* Baris kedua bergerak ke kanan */
+    .marquee-track.reverse {
+      animation: marquee-right 25s linear infinite;
+      margin-top: clamp(10px, 2vw, 30px); /* Jarak antar baris */
+    }
+
+    .marquee-group {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 3vw, 50px);
+      padding-right: clamp(20px, 3vw, 50px);
+    }
+
+    .marquee-group span {
+      font-weight: 800;
+      font-size: clamp(3.5rem, 8vw, 8rem);
+      line-height: 1;
+      white-space: nowrap;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      transition: color 0.3s ease;
+    }
+
+    /* Teks aksen (sedikit lebih terang / outline) */
+    .marquee-group span.accent {
+      color: var(--text-accent);
+      -webkit-text-stroke: 1px rgba(255, 252, 252, 0.15);
+    }
+
+    /* Titik pemisah */
+    .marquee-group .dot {
+      font-size: clamp(1rem, 2vw, 2rem);
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ====== KEYFRAMES ANIMASI ====== */
+    @keyframes marquee-left {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    @keyframes marquee-right {
+      from { transform: translateX(-50%); }
+      to   { transform: translateX(0); }
+    }
+
+    /* ====== INTERAKSI & EXTRAS ====== */
+    /* Pause animasi saat hover */
+    .marquee-dark:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    /* Matikan animasi untuk user yang sensitif terhadap gerakan */
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== MARQUEE TEXT (Tempel di antara 2 section) ====== -->
+  <section class="marquee-dark" aria-label="Perkenalan">
+    
+    <!-- Baris 1: Bergerak ke Kiri -->
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span>Hello I'm Specialist</span>
+        <span class="dot"></span>
+        <span class="accent">Fullstack Sport Designer</span>
+        <span class="dot"></span>
+        <span>Hello I'm Specialist</span>
+        <span class="dot"></span>
+        <span class="accent">Fullstack Sport Designer</span>
+        <span class="dot"></span>
+      </div>
+      <!-- Duplikat persis untuk loop yang mulus -->
+      <div class="marquee-group" aria-hidden="true">
+        <span>Hello I'm Specialist</span>
+        <span class="dot"></span>
+        <span class="accent">Fullstack Sport Designer</span>
+        <span class="dot"></span>
+        <span>Hello I'm Specialist</span>
+        <span class="dot"></span>
+        <span class="accent">Fullstack Sport Designer</span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Baris 2: Bergerak ke Kanan -->
+    <div class="marquee-track reverse">
+      <div class="marquee-group">
+        <span class="accent">Fullstack Sport Designer</span>
+        <span class="dot"></span>
+        <span>Hello I'm Specialist</span>
+        <span class="dot"></span>
+        <span class="accent">Fullstack Sport Designer</span>
+        <span class="dot"></span>
+        <span>Hello I'm Specialist</span>
+        <span class="dot"></span>
+      </div>
+      <!-- Duplikat persis untuk loop yang mulus -->
+      <div class="marquee-group" aria-hidden="true">
+        <span class="accent">Fullstack Sport Designer</span>
+        <span class="dot"></span>
+        <span>Hello I'm Specialist</span>
+        <span class="dot"></span>
+        <span class="accent">Fullstack Sport Designer</span>
+        <span class="dot"></span>
+        <span>Hello I'm Specialist</span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+  </section>
+
+    
+<style>
+    /* ===== RESET DASAR ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0d0d0d;
+      font-family: 'Segoe UI', 'Inter', sans-serif;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .abt-section {
+      min-height: 100vh;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      padding: 80px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .abt-section::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(69, 69, 70, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .abt-section::after {
+      content: '';
+      position: absolute;
+      bottom: -150px;
+      left: -150px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(69, 69, 70, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .abt-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== LEFT: TEXT ===== */
+    .abt-text-col {
+      flex: 1;
+      max-width: 560px;
+    }
+
+    .abt-heading {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .abt-desc {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #a0a0a0;
+      margin-bottom: 40px;
+    }
+
+    .abt-desc .abt-highlight {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* ===== CONNECT SECTION ===== */
+    .abt-connect-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .abt-connect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 30px;
+    }
+
+    .abt-connect-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+      color: #b0b0b0;
+      transition: color 0.3s ease;
+    }
+
+    .abt-connect-item:hover {
+      color: #fafafc;
+    }
+
+    .abt-connect-item i {
+      font-size: 1rem;
+      width: 20px;
+      text-align: center;
+      color: #7c7c7c;
+      transition: color 0.3s ease;
+    }
+
+    .abt-connect-item:hover i {
+      color: #f8f7fa;
+    }
+
+    /* ===== RIGHT: 3D CARD ===== */
+    .abt-visual-col {
+      flex: 0 0 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+    }
+
+    .abt-card-scene {
+      width: 260px;
+      height: 320px;
+      perspective: 900px;
+      position: relative;
+    }
+
+    .abt-card-3d {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: abt-spin-3d 12s infinite linear;
+    }
+
+    @keyframes abt-spin-3d {
+      0% { transform: rotateY(0deg) rotateX(5deg); }
+      100% { transform: rotateY(360deg) rotateX(5deg); }
+    }
+
+    .abt-card-3d.abt-paused {
+      animation-play-state: paused;
+    }
+
+    .abt-card-face {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .abt-card-front {
+      background: linear-gradient(145deg, #fffefe, #f1f1f3);
+      border: 1px solid rgba(253, 253, 255, 0.15);
+      box-shadow: 0 20px 60px rgba(241, 240, 240, 0.5);
+      transform: translateZ(30px);
+    }
+
+    .abt-card-img-wrap {
+      width: 180px;
+      height: 220px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0b0b0c, #141314);
+      padding: 3px;
+    }
+
+    .abt-card-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .abt-card-back {
+      background: linear-gradient(145deg, #fffefe, #fcfafa);
+      border: 1px solid rgba(77, 77, 78, 0.2);
+      transform: rotateY(180deg) translateZ(30px);
+      box-shadow: 0 20px 60px rgba(253, 251, 251, 0.5);
+    }
+
+    .abt-card-back-content {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .abt-back-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0f0f0f, #171718);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .abt-card-back-content h3 {
+      font-size: 1.2rem;
+      color: #0e0d0d;
+      margin-bottom: 8px;
+    }
+
+    .abt-card-back-content p {
+      font-size: 0.9rem;
+      color: #a0a0a0;
+    }
+
+    .abt-card-left {
+      width: 60px;
+      background: linear-gradient(180deg, #1e1e1e, #272727);
+      border: 1px solid rgba(167, 139, 250, 0.1);
+      transform: rotateY(-90deg) translateZ(30px);
+      left: -30px;
+    }
+
+    .abt-card-right {
+      width: 60px;
+      background: linear-gradient(180deg, #272727, #232222);
+      border: 1px solid rgba(167, 139, 250, 0.1);
+      transform: rotateY(90deg) translateZ(230px);
+      right: -30px;
+    }
+
+    .abt-card-side {
+      font-size: 1.2rem;
+      color: #111111;
+    }
+
+    /* ===== BOTTOM CARDS ===== */
+    .abt-bottom-row {
+      display: flex;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 60px auto 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .abt-info-card {
+      flex: 1;
+      background: linear-gradient(145deg, #0e0e0f, #151516);
+      border: 1px solid rgba(251, 251, 252, 0.1);
+      border-radius: 16px;
+      padding: 30px 35px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .abt-info-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(13, 13, 14, 0.3);
+    }
+
+    .abt-info-card h3 {
+      font-size: 1.2rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .abt-info-card p {
+      font-size: 1rem;
+      color: #c0c0c0;
+      margin-bottom: 6px;
+    }
+
+    .abt-info-card .abt-sub-text {
+      font-size: 0.85rem;
+      color: #707070;
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .abt-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .abt-reveal.abt-is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .abt-section { padding: 60px 30px; }
+      .abt-container { flex-direction: column; text-align: center; }
+      .abt-text-col { max-width: 100%; }
+      .abt-connect-grid { grid-template-columns: 1fr; text-align: left; }
+      .abt-visual-col { flex: none; margin-bottom: 40px; }
+      .abt-bottom-row { flex-direction: column; }
+      .abt-heading { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- About Section -->
+  <section id="section-about" class="abt-section">
+    <div class="abt-container">
+
+      <!-- Left Column: Text Content -->
+      <div class="abt-text-col abt-reveal anim slide-right">
+        <h1 class="abt-heading anim">About</h1>
+        <p class="abt-desc anim slide-right">
+          I'm <span class="abt-highlight anim slide-right">Rayhan Edge</span>, a Visual Communication Design
+          student passionate about graphic design, 3D visualization, branding, and motion graphics.
+          I enjoy transforming ideas into clean, engaging, and meaningful visual experiences while
+          continuously learning and exploring new creative possibilities.
+        </p>
+
+        <div class="abt-connect anim slide-left">
+          <h2 class="abt-connect-title">Let's Connect</h2>
+          <div class="abt-connect-grid">
+            <div class="abt-connect-item">
+              <i class="fas fa-envelope"></i>
+              <span>raihanalie291@gmail.com</span>
+            </div>
+            <div class="abt-connect-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Banyuwangi</span>
+            </div>
+            <div class="abt-connect-item">
+              <i class="fas fa-phone"></i>
+              <span>+62 858-5544-4927</span>
+            </div>
+            <div class="abt-connect-item">
+              <i class="fab fa-instagram"></i>
+              <span>raihan.design_</span>
+            </div>
+            <div class="abt-connect-item">
+              <i class="fab fa-behance"></i>
+              <span>raihandesign1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: 3D Rotating Card -->
+      <div class="abt-visual-col abt-reveal">
+        <div class="abt-card-scene">
+          <div class="abt-card-3d" id="card-rotate-3d">
+            <!-- Front Face -->
+            <div class="abt-card-face abt-card-front">
+              <div class="abt-card-img-wrap">
+                <img src="assets/img/ex.jpg"Profile" class="abt-card-photo">
+              </div>
+            </div>
+            <!-- Back Face -->
+            <div class="abt-card-face abt-card-back">
+              <div class="abt-card-back-content">
+                <div class="abt-back-icon">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <h3>Sport Designer</h3>
+                <p>Graphic • 3D</p>
+              </div>
+            </div>
+            <!-- Left Face -->
+            <div class="abt-card-face abt-card-left">
+              <div class="abt-card-side">
+                <i class="fas fa-code"></i>
+              </div>
+            </div>
+            <!-- Right Face -->
+            <div class="abt-card-face abt-card-right">
+              <div class="abt-card-side">
+                <i class="fas fa-pen-nib"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const card = document.getElementById('card-rotate-3d');
+      if (!card) return;
+
+      const scene = card.closest('.abt-card-scene');
+
+      scene.addEventListener('mouseenter', () => {
+        card.classList.add('abt-paused');
+      });
+
+      scene.addEventListener('mousemove', (e) => {
+        const rect = scene.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateY = ((x - centerX) / centerX) * 30;
+        const rotateX = ((centerY - y) / centerY) * 20;
+
+        card.style.transition = 'transform 0.1s ease-out';
+        card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+      });
+
+      scene.addEventListener('mouseleave', () => {
+        card.classList.remove('abt-paused');
+        card.style.transition = 'transform 0.6s ease';
+        card.style.transform = '';
+      });
+
+      // Scroll Reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('abt-is-visible');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.abt-reveal').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+
+<style>
+  
+    /* ===== RESET & BASE ===== */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --bg-primary: #060b06;
+      --text-primary: #f0f0f0;
+      --text-secondary: #afafaf;
+      --accent: #ffffff;
+      --timeline-track: rgba(255, 255, 255, 0.08); /* Warna garis latar yang redup */
+      --glow: rgba(100, 180, 100, 0.06);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== EXPERIENCE SECTION ===== */
+    .experience-section {
+      position: relative;
+      min-height: 100vh;
+      padding: 120px 48px 120px;
+      overflow: hidden;
+    }
+
+    .experience-section::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 100px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .section-label.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-title {
+      font-size: clamp(48px, 7vw, 96px);
+      font-weight: 800;
+      letter-spacing: -3px;
+      line-height: 1;
+      color: var(--text-primary);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+    }
+
+    .section-title.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-title-underline {
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      margin-top: 24px;
+      transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+    }
+
+    .section-title-underline.visible {
+      width: 80px;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    /* 1. Garis Latar (Track) - Redup & Statis */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 100%;
+      background: white(--timeline-track);
+    }
+
+    /* 2. Garis Mengalir (Fill) - Terang & Dinamis via JS */
+    .timeline-line-fill {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 0%; /* Akan diupdate oleh JavaScript */
+      background: var(--accent);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(200, 230, 201, 0.3);
+      z-index: 2;
+      transition: height 0.1s linear; /* Mencegah jitter saat scroll */
+    }
+
+    /* Titik cahaya di ujung garis yang mengalir */
+    .timeline-line-fill::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .timeline-line-fill.active::after {
+      opacity: 1;
+    }
+
+    .timeline-item {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 100px;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Dot pada timeline */
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 8px;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: white(--bg-primary);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      z-index: 3;
+      transition: all 0.4s ease;
+    }
+
+    /* Efek saat garis mengalir melewati dot */
+    .timeline-item.passed .timeline-dot {
+      background: white(--accent);
+      border-color: white(--accent);
+      box-shadow: 0 0 10px rgba(249, 249, 249, 0.5019607843137255);
+      transform: translateX(-50%) scale(1.2);
+    }
+
+    .timeline-content {
+      width: 45%;
+      padding: 0 40px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-right: auto;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: auto;
+      text-align: left;
+    }
+
+    .timeline-date {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: white(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .timeline-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+      color: white(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .timeline-subtitle {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #dadada(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .timeline-description {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: #8f8f8f(--text-secondary);
+      max-width: 420px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-description {
+      margin-left: auto;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .experience-section {
+        padding: 100px 24px 80px;
+      }
+
+      .section-header {
+        margin-bottom: 60px;
+      }
+
+      /* Pindahkan garis ke kiri di mobile */
+      .timeline::before,
+      .timeline-line-fill {
+        left: 24px;
+      }
+
+      .timeline-dot {
+        left: 24px;
+      }
+
+      .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+        text-align: left !important;
+        padding: 0 16px;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-description {
+        margin-left: 0;
+      }
+
+      .timeline-item {
+        margin-bottom: 60px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section-title {
+        letter-spacing: -1px;
+      }
+
+      .timeline-title {
+        font-size: 18px;
+      }
+
+      .timeline-description {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Experience Section -->
+  <section class="res-section" id="res">
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2 class="section-title animate-float anim slide-right" data-animate>Resume</h2>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline" id="timeline">
+      <!-- Garis yang akan mengalir (Fill) -->
+      <div class="timeline-line-fill" id="timelineFill"></div>
+
+      <!-- Item 1 -->
+      <div class="timeline-item" data-animate>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content anim slide-right">
+          <p class="timeline-date">2016 — 2022</p>
+          <h3 class="timeline-title">SDN 2 Penganjuran &amp; U</h3>
+          <p class="timeline-subtitle">Remote</p>
+          <p class="timeline-description">
+early development, not yet interested in the world of design and technology
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="timeline-item" data-animate>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content anim slide-left">
+          <p class="timeline-date">2022 — 2025</p>
+          <h3 class="timeline-title">SMPN 1 Banyuwangi</h3>
+          <p class="timeline-subtitle">Remote — Houston, Texas USA</p>
+          <p class="timeline-description">the beginning of interest in the world of digital sports design and branding, joining the simple buying and selling and design community
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="timeline-item" data-animate>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content anim slide-right">
+          <p class="timeline-date">2025 — Present</p>
+          <h3 class="timeline-title">SMK PGRI 1 Giri Banyuwangi</h3>
+          <p class="timeline-subtitle">Bath University — Bath, England</p>
+          <p class="timeline-description">
+Choose the TKJ major according to your interests and desires from the start of junior high school
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="timeline-item" data-animate>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content anim slide-left">
+          <p class="timeline-date">2024 — Present</p>
+          <h3 class="timeline-title">Freelance Sport Designer</h3>
+          <p class="timeline-subtitle">Variety — Beirut, Lebanon</p>
+          <p class="timeline-description">
+Design and build high-performance matchday poster and feed for clients. I handle every
+            stage of the design process — from UX research and wireframing to UI design, front-end
+            development, and deployment — delivering polished, production-ready digital products.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="timeline-item" data-animate>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content anim slide-right">
+          <p class="timeline-date"></p>
+          <h3 class="timeline-title">Create Design Class</h3>
+          <p class="timeline-subtitle">Visual Works ID</p>
+          <p class="timeline-description">
+            Guided students through matchday designing concepts.
+            Conducted workshops, reviewed assignments, and provided one-on-one mentorship to help
+            learners build confidence.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // ===== 1. INTERSECTION OBSERVER — Animasi Fade-in Teks =====
+    const animateElements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    );
+    animateElements.forEach((el) => observer.observe(el));
+
+    // ===== 2. SCROLL PROGRESS — Efek Garis Mengalir (Flowing Bar) =====
+    const timeline = document.getElementById('timeline');
+    const timelineFill = document.getElementById('timelineFill');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    function updateTimelineProgress() {
+      if (!timeline || !timelineFill) return;
+
+      const rect = timeline.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Hitung progress: 0 saat atas timeline di tengah layar, 1 saat bawah timeline di tengah layar
+      let progress = (windowHeight / 2 - rect.top) / rect.height;
+      progress = Math.max(0, Math.min(1, progress));
+
+      // Update tinggi garis
+      timelineFill.style.height = `${progress * 100}%`;
+
+      // Tampilkan titik cahaya di ujung garis jika sedang mengalir
+      if (progress > 0 && progress < 1) {
+        timelineFill.classList.add('active');
+      } else {
+        timelineFill.classList.remove('active');
+      }
+
+      // Efek tambahan: Nyalakan dot pada item yang sudah dilewati garis
+      timelineItems.forEach((item) => {
+        const itemRect = item.getBoundingClientRect();
+        // Jika tengah item sudah melewati tengah layar (artinya garis sudah melewatinya)
+        if (itemRect.top + itemRect.height / 2 < windowHeight / 2) {
+          item.classList.add('passed');
+        } else {
+          item.classList.remove('passed');
+        }
+      });
+    }
+
+    // Jalankan saat scroll dan resize dengan passive listener agar smooth
+    window.addEventListener('scroll', updateTimelineProgress, { passive: true });
+    window.addEventListener('resize', updateTimelineProgress);
+    
+    // Panggil sekali saat load untuk inisialisasi
+    updateTimelineProgress();
+  </script>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <!-- Section Title -->
+      <div class="container section-title anim slide-left">
+        <h2>Skills</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-12">
+
+            <div class="progress animate-float delay-2">
+              <span class="skill"><span>Sport Design</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap anim slide-left">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <!--<div class="progress">
+              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          <!--  <div class="progress">
+              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+
+
+  <script src="gallery.js"></script>
+</body>
+</html>
+
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="anim slide-right">Projects</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-works">Works</li>
+            <li data-filter=".filter-projects ">Projects</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app anim slide-right">
+              <img src="assets/img/uav.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Profile</h4>
+                <p>Feb 26</p>
+                <a href="assets/img/uav.jpeg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portofolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-works anim slide-left">
+              <img src="assets/img/masonry-portfolio/32.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Work 1</h4>
+                <p>Client : Paul Wanner</p>
+                <a href="assets/img/masonry-portfolio/32.jpeg" title="Work 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portofolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects anim slide-right">
+              <img src="assets/img/masonry-portfolio/16.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Unused</h4>
+                <p>Design Inspiration</p>
+                <a href="assets/img/masonry-portfolio/16.jpeg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portofolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects anim slide-left">
+              <img src="assets/img/masonry-portfolio/afternoon.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Unused</h4>
+                <p>Design Inspiration</p>
+                <a href="assets/img/masonry-portfolio/afternoon.jpeg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portofolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects anim slide-right">
+              <img src="assets/img/masonry-portfolio/night.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Unused</h4>
+                <p>Design Inspiration</p>
+                <a href="assets/img/masonry-portfolio/night.jpeg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portofolio Item -->
+
+    </section><!-- /Portofolio Section -->
+
+
+    
+ <!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2 class="anim slide-right">Services</h2>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4">
+
+<style>
+  /* Styling dasar untuk kartu servis agar rapi */
+  .simple-service-card {
+    text-align: center;
+    padding: 30px 20px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    background: #131111505;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .simple-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Base style untuk ikon bingkai rasio */
+  .ratio-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #333; /* Warna netral (hitam/abu) */
+    border-radius: 6px;
+    background-color: #0f0e0e;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 800;
+    color: #fffdfd;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+
+  /* Rasio 9:16 (45px / 80px = 0.5625) */
+  .ratio-9-16 {
+    width: 45px;
+    height: 80px;
+    font-size: 14px;
+  }
+
+  /* Rasio 1:1 (70px / 70px = 1.0) */
+  .ratio-1-1 {
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+  }
+
+  /* Rasio 3:4 (60px / 80px = 0.75) */
+  .ratio-3-4 {
+    width: 60px;
+    height: 80px;
+    font-size: 16px;
+  }
+
+  .simple-service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #fffdfd;
+  }
+
+  .simple-service-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+  }
+</style>
+      
+      <!-- Service Item 1: 9:16 -->
+      <div style="flex: 0 0 100%; max-width: 100%; padding: 0 15px; margin-bottom: 30px;" class="col-md-6">
+        <div class="simple-service-card animate-float delay-2">
+          <div class="ratio-icon ratio-9-16">9:16</div>
+          <h3>Matchday Poster</h3>
+          <h2>$5</h2>
+        </div>
+      </div>
+
+      <!-- Service Item 2: 1:1 -->
+      <div style="flex: 0 0 100%; max-width: 100%; padding: 0 15px; margin-bottom: 30px;" class="col-md-6">
+        <div class="simple-service-card animate-float delay-3">
+          <div class="ratio-icon ratio-1-1">1:1</div>
+          <h3>Profile Logo</h3>
+          <h2>$3</h2>
+        </div>
+      </div>
+
+      <!-- Service Item 3: 3:4 -->
+      <div style="flex: 0 0 100%; max-width: 100%; padding: 0 15px; margin-bottom: 30px;" class="col-md-6">
+        <div class="simple-service-card animate-float delay-5">
+          <div class="ratio-icon ratio-3-4">3:4</div>
+          <h3>Feed Design</h3>
+          <h2>$5</h>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+</div><!-- End Service Item -->
+
+</div>
+
+</div><!-- /Services Section -->
+
+<!-- Tombol Order Now -->
+<div class="order-now-wrapper animate-float delay-4">
+  <a href="#contact" class="btn-order-now">Order Now</a>
+</div><!-- /sTombol Order Now -->
+
+     <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="anim slide-left">Testimonials</h2>
+         </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        <span>Proin iaculis purus consequat sem cure digni ssim donec.</span>
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Anthony Rouault</h3>
+                      <h4>Rennais (2025)</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="assets/img/testimonials/ion.jpeg" class="img-fluid testimonial-img animate-float delay-1" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        <span>“Literally Good, I love the retouch detail.”</span>
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Paul Wanner</h3>
+                      <h4>PSV (2025)</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="assets/img/testimonials/Paul Wanner.jpg" class="img-fluid testimonial-img animate-float delay-2" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="anim slide-left">Contact</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+
+      <div class="container data-aos="fade" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 anim slide-right">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Mulyoasri Kec. Penganjuran, Banyuwangi </p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>No HP</h3>
+                <p>085855444927</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>raihanalie291@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8 anim slide-left">
+            <form id="contact-form" method="post" class="emailjs-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading" style="display: none;">Loading</div>
+                  <div class="error-message" style="display: none;"></div>
+                  <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Muhammad Rayhan Pamungkas</h3>
+      <p></p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://instagram.com/raihan.design_"><i class="bi bi-instagram"></i></a>
+        <a href="https://behance.net/raihandesign1"><i class="bi bi-behance"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Muhammad Rayhan Pamungkas</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://behance.net/raihandesign1">-</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
