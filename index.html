@@ -1753,17 +1753,143 @@ setTimeout(() => {
       opacity: 1;
       transform: translateY(0);
     }
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .abt-section {
+    padding: 50px 24px !important;
+  }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      .abt-section { padding: 60px 30px; }
-      .abt-container { flex-direction: column; text-align: center; }
-      .abt-text-col { max-width: 100%; }
-      .abt-connect-grid { grid-template-columns: 1fr; text-align: left; }
-      .abt-visual-col { flex: none; margin-bottom: 40px; }
-      .abt-bottom-row { flex-direction: column; }
-      .abt-heading { font-size: 2.4rem; }
-    }
+  .abt-container {
+    flex-direction: column !important;
+    text-align: left !important;
+    gap: 40px !important;
+  }
+
+  /* Heading */
+  .abt-heading {
+    font-size: 2.2rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Description */
+  .abt-desc {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 30px !important;
+  }
+
+  /* Connect Section - 2 KOLOM */
+  .abt-connect-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 18px !important;
+  }
+
+  .abt-connect-grid {
+    grid-template-columns: 1fr 1fr !important;  /* ← KUNCI: 2 kolom */
+    gap: 10px 16px !important;                  /* gap vertikal 10px, horizontal 16px */
+  }
+
+  .abt-connect-item {
+    font-size: 0.82rem !important;              /* font lebih kecil agar muat 2 kolom */
+    padding: 6px 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  .abt-connect-item i {
+    font-size: 0.85rem !important;
+    width: 18px !important;
+    flex-shrink: 0 !important;                  /* icon tidak mengecil */
+  }
+
+  .abt-connect-item span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* 3D Card */
+  .abt-visual-col {
+    flex: none !important;
+    width: 100% !important;
+    margin: 20px 0 40px !important;
+    perspective: 1000px !important;
+  }
+
+  .abt-card-scene {
+    width: 220px !important;
+    height: 290px !important;
+    margin: 0 auto !important;
+  }
+
+  .abt-card-3d {
+    animation-duration: 16s !important;
+  }
+
+  .abt-photo-area {
+    width: 140px !important;
+    height: 190px !important;
+  }
+
+  .abt-dots span:nth-child(1) {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .abt-dots span:nth-child(2) {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .abt-dots span:nth-child(3) {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .abt-dots {
+    gap: 18px !important;
+    right: 14px !important;
+  }
+
+  /* Bottom Cards */
+  .abt-bottom-row {
+    flex-direction: column !important;
+    gap: 16px !important;
+    margin-top: 40px !important;
+  }
+
+  .abt-info-card {
+    padding: 24px 20px !important;
+  }
+
+  .abt-info-card h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .abt-info-card p {
+    font-size: 0.95rem !important;
+  }
+
+  .abt-info-card .abt-sub-text {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ===== VERY SMALL SCREENS (≤ 380px) ===== */
+@media (max-width: 380px) {
+  .abt-connect-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px 10px !important;
+  }
+
+  .abt-connect-item {
+    font-size: 0.75rem !important;
+  }
+
+  .abt-connect-item i {
+    font-size: 0.75rem !important;
+    width: 16px !important;
+  }
+  }
   </style>
 </head>
 <body>
@@ -1816,7 +1942,7 @@ setTimeout(() => {
             <!-- Front Face -->
             <div class="abt-card-face abt-card-front">
               <div class="abt-card-img-wrap">
-                <img src="assets/img/ex.jpg"Profile" class="abt-card-photo">
+                <img src="assets/img/now.jpg"Profile" class="abt-card-photo">
               </div>
             </div>
             <!-- Back Face -->
@@ -2150,55 +2276,65 @@ setTimeout(() => {
       margin-left: auto;
     }
 
-    /* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE (Dua Sisi Kiri-Kanan di Mobile) ===== */
     @media (max-width: 900px) {
       .experience-section {
-        padding: 100px 24px 80px;
+        padding: 100px 20px 80px;
       }
 
       .section-header {
-        margin-bottom: 60px;
-      }
-
-      /* Pindahkan garis ke kiri di mobile */
-      .timeline::before,
-      .timeline-line-fill {
-        left: 24px;
-      }
-
-      .timeline-dot {
-        left: 24px;
-      }
-
-      .timeline-content {
-        width: calc(100% - 60px);
-        margin-left: 60px !important;
-        text-align: left !important;
-        padding: 0 16px;
-      }
-
-      .timeline-item:nth-child(odd) .timeline-description {
-        margin-left: 0;
+        margin-bottom: 70px;
       }
 
       .timeline-item {
-        margin-bottom: 60px;
+        margin-bottom: 70px;
+      }
+
+      /* Hapus paksaan satu kolom, biarkan tetap dua sisi */
+      .timeline-content {
+        width: 45%;
+        padding: 0 16px;
+      }
+
+      /* Sesuaikan ukuran font agar muat di layar kecil */
+      .timeline-title {
+        font-size: 17px;
+      }
+
+      .timeline-description {
+        font-size: 12.5px;
+        line-height: 1.7;
+      }
+
+      .timeline-subtitle,
+      .timeline-date {
+        font-size: 10px;
       }
     }
 
     @media (max-width: 600px) {
-      .section-title {
-        letter-spacing: -1px;
+      .experience-section {
+        padding: 80px 12px 60px;
+      }
+
+      .timeline-content {
+        padding: 0 10px;
       }
 
       .timeline-title {
-        font-size: 18px;
+        font-size: 15px;
       }
 
       .timeline-description {
-        font-size: 13px;
+        font-size: 11.5px;
       }
-    }
+
+      /* Perkecil dot agar tidak menutupi teks di layar sangat kecil */
+      .timeline-dot {
+        width: 10px;
+        height: 10px;
+      }
+  }
   </style>
 </head>
 <body>
@@ -2351,8 +2487,8 @@ Design and build high-performance matchday poster and feed for clients. I handle
     <section id="skills" class="skills section">
 
       <!-- Section Title -->
-      <div class="container section-title anim slide-left">
-        <h2>Skills</h2>
+      <div class="container section-title">
+        <h2 class="animate-float">Skills</h2>
         <p></p>
       </div><!-- End Section Title -->
 
