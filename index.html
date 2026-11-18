@@ -2482,7 +2482,6 @@ Design and build high-performance matchday poster and feed for clients. I handle
     // Panggil sekali saat load untuk inisialisasi
     updateTimelineProgress();
   </script>
-; }
 
 
   <style>
@@ -2569,7 +2568,7 @@ Design and build high-performance matchday poster and feed for clients. I handle
     }
 
     .skills-section h2 {
-      font-size: 1.3rem;
+      font-size: 1.9rem;
       margin-bottom: 22px;
     }
 
@@ -2608,13 +2607,14 @@ Design and build high-performance matchday poster and feed for clients. I handle
 </section>
 
 <script>
-  // Animasi skill bar saat muncul di viewport
   const skills = document.querySelectorAll('.skill');
 
   const animateSkill = (el) => {
     const percent = el.getAttribute('data-percent');
     const fill = el.querySelector('.skill-fill');
     const label = el.querySelector('.skill-percent');
+
+    if (!fill || !label) return;
 
     // Animasi angka
     let current = 0;
@@ -2636,19 +2636,27 @@ Design and build high-performance matchday poster and feed for clients. I handle
     fill.style.width = percent + '%';
   };
 
-  // IntersectionObserver untuk animasi saat scroll
+  // Coba IntersectionObserver dulu
+  let observerWorked = false;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         animateSkill(entry.target);
         observer.unobserve(entry.target);
+        observerWorked = true;
       }
     });
   }, { threshold: 0.3 });
 
   skills.forEach(skill => observer.observe(skill));
-</script>
 
+  // Fallback: jika setelah 500ms belum ada yang dianimasikan, jalankan manual
+  setTimeout(() => {
+    if (!observerWorked) {
+      skills.forEach(skill => animateSkill(skill));
+    }
+  }, 500);
+</script>
 
   <script src="gallery.js"></script>
 </body>
