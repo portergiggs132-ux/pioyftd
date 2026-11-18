@@ -1,0 +1,136 @@
+/**
+* Template Name: MyResume
+* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+* Updated: Jun 29 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# Font & Color Variables
+# Help: https://bootstrapmade.com/color-system/
+--------------------------------------------------------------*/
+
+/* ===== BASE: Semua elemen dengan class animasi ===== */
+.anim {
+  opacity: 0;
+  transition: 
+    opacity 2.1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 2.1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* ===== Slide Up (dari bawah) - JAUH & LAMBAT ===== */
+.anim.slide-up {
+  transform: translateY(50px);
+}
+.anim.slide-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Slide Down (dari atas) ===== */
+.anim.slide-down {
+  transform: translateY(-50px);
+}
+.anim.slide-down.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Slide Left (dari kiri) ===== */
+.anim.slide-left {
+  transform: translateX(-70px);
+}
+.anim.slide-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== Slide Right (dari kanan) ===== */
+.anim.slide-right {
+  transform: translateX(70px);
+}
+.anim.slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== Fade In ===== */
+.anim.fade-in {
+  transform: none;
+}
+.anim.fade-in.is-visible {
+  opacity: 1;
+}
+
+/* ===== Zoom In (lebih dramatis) ===== */
+.anim.zoom-in {
+  transform: scale(0.7);
+}
+.anim.zoom-in.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===== Slide Up + Fade + Scale (paling smooth & modern) ===== */
+.anim.slide-up-soft {
+  transform: translateY(50px) scale(0.95);
+}
+.anim.slide-up-soft.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ===== Delay utilities (untuk stagger effect) ===== */
+.anim[data-delay="100"] { transition-delay: 100ms; }
+.anim[data-delay="200"] { transition-delay: 200ms; }
+.anim[data-delay="300"] { transition-delay: 300ms; }
+.anim[data-delay="400"] { transition-delay: 400ms; }
+.anim[data-delay="500"] { transition-delay: 500ms; }
+.anim[data-delay="600"] { transition-delay: 600ms; }
+.anim[data-delay="700"] { transition-delay: 700ms; }
+.anim[data-delay="800"] { transition-delay: 800ms; }
+.anim[data-delay="1000"] { transition-delay: 1000ms; }
+.anim[data-delay="1200"] { transition-delay: 1200ms; }
+
+/* ===== Duration override (jika ingin lebih cepat/lambat per elemen) ===== */
+.anim[data-duration="slow"]   { transition-duration: 2s; }
+.anim[data-duration="slower"] { transition-duration: 2.5s; }
+/* ===== FIX: Mencegah Layout Shift & Jitter ===== */
+.anim {
+  opacity: 0;
+  transition: 
+    opacity 2.1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 2.1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+  
+  /* FIX: Isolasi layout untuk mencegah reflow */
+  contain: layout style paint;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  
+  /* FIX: Pastikan elemen tidak overflow saat animasi */
+  overflow: hidden;
+}
+
+/* FIX: Container untuk teks besar harus punya min-height */
+.anim.slide-up,
+.anim.slide-down,
+.anim.slide-left,
+.anim.slide-right {
+  /* Pastikan container cukup besar untuk menampung animasi */
+  min-height: auto;
+}
+
+/* FIX: Untuk teks besar seperti "PORTFOLIO" */
+.anim.slide-up.text-large,
+.anim.slide-down.text-large {
+  /* Kurangi jarak geser untuk teks besar */
+  transform: translateY(60px);
+}
+
+.anim.slide-up.text-large.is-visible,
+.anim.slide-down.text-large.is-visible {
+  transform: translateY(0);
+}
