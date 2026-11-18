@@ -2607,57 +2607,39 @@ Design and build high-performance matchday poster and feed for clients. I handle
 </section>
 
 <script>
-  const skills = document.querySelectorAll('.skill');
+  window.addEventListener('load', function() {
+    const skills = document.querySelectorAll('.skill');
+    
+    skills.forEach(function(el) {
+      const percent = el.getAttribute('data-percent');
+      const fill = el.querySelector('.skill-fill');
+      const label = el.querySelector('.skill-percent');
 
-  const animateSkill = (el) => {
-    const percent = el.getAttribute('data-percent');
-    const fill = el.querySelector('.skill-fill');
-    const label = el.querySelector('.skill-percent');
+      if (!fill || !label) return;
 
-    if (!fill || !label) return;
+      // Set width langsung
+      setTimeout(function() {
+        fill.style.width = percent + '%';
+      }, 300);
 
-    // Animasi angka
-    let current = 0;
-    const duration = 1400;
-    const stepTime = 20;
-    const steps = duration / stepTime;
-    const increment = percent / steps;
+      // Animasi angka
+      let current = 0;
+      const duration = 1400;
+      const stepTime = 20;
+      const steps = duration / stepTime;
+      const increment = percent / steps;
 
-    const counter = setInterval(() => {
-      current += increment;
-      if (current >= percent) {
-        current = percent;
-        clearInterval(counter);
-      }
-      label.textContent = Math.round(current) + '%';
-    }, stepTime);
-
-    // Animasi bar
-    fill.style.width = percent + '%';
-  };
-
-  // Coba IntersectionObserver dulu
-  let observerWorked = false;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateSkill(entry.target);
-        observer.unobserve(entry.target);
-        observerWorked = true;
-      }
+      const counter = setInterval(function() {
+        current += increment;
+        if (current >= percent) {
+          current = percent;
+          clearInterval(counter);
+        }
+        label.textContent = Math.round(current) + '%';
+      }, stepTime);
     });
-  }, { threshold: 0.3 });
-
-  skills.forEach(skill => observer.observe(skill));
-
-  // Fallback: jika setelah 500ms belum ada yang dianimasikan, jalankan manual
-  setTimeout(() => {
-    if (!observerWorked) {
-      skills.forEach(skill => animateSkill(skill));
-    }
-  }, 500);
+  });
 </script>
-
   <script src="gallery.js"></script>
 </body>
 </html>
