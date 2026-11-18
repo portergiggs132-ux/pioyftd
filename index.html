@@ -2483,63 +2483,201 @@ Design and build high-performance matchday poster and feed for clients. I handle
     updateTimelineProgress();
   </script>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
+<style>
+  /* ===== RESET & BASE ===== */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p></p>
-      </div><!-- End Section Title -->
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f8f9fb;
+    color: #1f2937;
+    padding: 40px 20px;
+  }
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  /* ===== CONTAINER ===== */
+  .skills-section {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  }
 
-        <div class="row skills-content skills-animation">
+  .skills-section h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #111827;
+    letter-spacing: -0.02em;
+  }
 
-          <div class="col-lg-12">
+  /* ===== SKILL ITEM ===== */
+  .skill {
+    margin-bottom: 22px;
+  }
 
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
 
-            <div class="progress">
-              <span class="skill"><span>Sport Design</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
+  .skill-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #374151;
+  }
 
+  .skill-percent {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6366f1;
+  }
 
+  /* ===== BAR ===== */
+  .skill-bar {
+    width: 100%;
+    height: 8px;
+    background: #eef0f4;
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+  }
 
-          </div>
+  .skill-fill {
+    height: 100%;
+    width: 0; /* animasi dimulai dari 0 */
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: 999px;
+    transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
 
-          <div class="col-lg-6">
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 640px) {
+    body { padding: 20px 12px; }
 
-            <!--<div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
+    .skills-section {
+      padding: 24px 20px;
+      border-radius: 12px;
+    }
 
-          <!--  <div class="progress">
-              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
+    .skills-section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 22px;
+    }
 
+    .skill-name { font-size: 0.88rem; }
+    .skill-percent { font-size: 0.8rem; }
 
-          </div>
+    .skill-bar { height: 6px; }
+    .skill { margin-bottom: 18px; }
+  }
 
-        </div>
+  @media (max-width: 380px) {
+    .skills-section { padding: 20px 16px; }
+    .skill-name { font-size: 0.82rem; }
+  }
+</style>
+</head>
+<body>
 
-      </div>
+<section class="skills-section">
+  <h2>My Skills</h2>
 
-    </section><!-- /Skills Section -->
+  <div class="skill" data-percent="90">
+    <div class="skill-header">
+      <span class="skill-name">HTML & CSS</span>
+      <span class="skill-percent">0%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-fill"></div>
+    </div>
+  </div>
+
+  <div class="skill" data-percent="80">
+    <div class="skill-header">
+      <span class="skill-name">JavaScript</span>
+      <span class="skill-percent">0%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-fill"></div>
+    </div>
+  </div>
+
+  <div class="skill" data-percent="75">
+    <div class="skill-header">
+      <span class="skill-name">PHP / Laravel</span>
+      <span class="skill-percent">0%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-fill"></div>
+    </div>
+  </div>
+
+  <div class="skill" data-percent="70">
+    <div class="skill-header">
+      <span class="skill-name">UI / UX Design</span>
+      <span class="skill-percent">0%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-fill"></div>
+    </div>
+  </div>
+
+  <div class="skill" data-percent="65">
+    <div class="skill-header">
+      <span class="skill-name">Database (MySQL)</span>
+      <span class="skill-percent">0%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-fill"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Animasi skill bar saat muncul di viewport
+  const skills = document.querySelectorAll('.skill');
+
+  const animateSkill = (el) => {
+    const percent = el.getAttribute('data-percent');
+    const fill = el.querySelector('.skill-fill');
+    const label = el.querySelector('.skill-percent');
+
+    // Animasi angka
+    let current = 0;
+    const duration = 1400;
+    const stepTime = 20;
+    const steps = duration / stepTime;
+    const increment = percent / steps;
+
+    const counter = setInterval(() => {
+      current += increment;
+      if (current >= percent) {
+        current = percent;
+        clearInterval(counter);
+      }
+      label.textContent = Math.round(current) + '%';
+    }, stepTime);
+
+    // Animasi bar
+    fill.style.width = percent + '%';
+  };
+
+  // Pakai IntersectionObserver agar animasi jalan saat user scroll ke section
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateSkill(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  skills.forEach(skill => observer.observe(skill));
+</script>
 
 
 
