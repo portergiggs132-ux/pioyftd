@@ -2482,33 +2482,37 @@ Design and build high-performance matchday poster and feed for clients. I handle
     // Panggil sekali saat load untuk inisialisasi
     updateTimelineProgress();
   </script>
+; }
 
-<style>
+
+  <style>
   /* ===== RESET & BASE ===== */
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background: #f8f9fb;
-    color: #1f2937;
+    background: #0a0a0a;
+    color: #f5f5f5;
     padding: 40px 20px;
+    min-height: 100vh;
   }
 
   /* ===== CONTAINER ===== */
   .skills-section {
     max-width: 720px;
     margin: 0 auto;
-    background: #ffffff;
+    background: #141414;
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #222;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
   }
 
   .skills-section h2 {
     font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 30px;
-    color: #111827;
+    color: #ffffff;
     letter-spacing: -0.02em;
   }
 
@@ -2527,29 +2531,30 @@ Design and build high-performance matchday poster and feed for clients. I handle
   .skill-name {
     font-size: 0.95rem;
     font-weight: 500;
-    color: #374151;
+    color: #d4d4d4;
   }
 
   .skill-percent {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #6366f1;
+    color: #ffffff;
   }
 
   /* ===== BAR ===== */
   .skill-bar {
     width: 100%;
     height: 8px;
-    background: #eef0f4;
+    background: #1f1f1f;
     border-radius: 999px;
     overflow: hidden;
     position: relative;
+    border: 1px solid #2a2a2a;
   }
 
   .skill-fill {
     height: 100%;
-    width: 0; /* animasi dimulai dari 0 */
-    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    width: 0;
+    background: #ffffff;
     border-radius: 999px;
     transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -2666,7 +2671,7 @@ Design and build high-performance matchday poster and feed for clients. I handle
     fill.style.width = percent + '%';
   };
 
-  // Pakai IntersectionObserver agar animasi jalan saat user scroll ke section
+  // IntersectionObserver untuk animasi saat scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -2678,7 +2683,6 @@ Design and build high-performance matchday poster and feed for clients. I handle
 
   skills.forEach(skill => observer.observe(skill));
 </script>
-
 
 
   <script src="gallery.js"></script>
