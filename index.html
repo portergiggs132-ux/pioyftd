@@ -1064,7 +1064,7 @@ setTimeout(() => {
             
             <div class="opener-categories">
                 <div class="opener-category">DESIGN -</div>
-                <div class="opener-category">MARKETING</div>
+                <div class="opener-category">BRANDING</div>
             </div>
         </div>
     </section>
@@ -1194,23 +1194,23 @@ setTimeout(() => {
           <div class="col-lg-10">
       
 <!-- Glassmorphism Card -->
-            <div class="hero-glass-card anim slide-up">
+            <div class="hero-glass-card anim slide-down">
               <div class="hero-badge">Welcome</div>
-              <h2 class="hero-title animate-on-load">MUHAMMAD RAYHAN PAMUNGKAS</h2>
+              <h2 class="hero-title animate-on-load anim-fade-up delay-3">MUHAMMAD RAYHAN PAMUNGKAS</h2>
               <p class="hero-subtitle animate-on-load anim-fade-up delay-4">I am <span class="typed" data-typed-items="Sport Designer, Scout, Content Creator, Ordinaryman"></span><span class="typed-cursor typed-cursor--blink">|</span></p>
               <div class="profile-container">
  <div class="hero-section">
 
   <div class="profile-wrapper animate-on-load anim-scale-in delay-2">
     <div class="profile-circle animate-on-load anim-scale-in delay-2">
-      <img src="assets/img/jon.jpg" alt="Profile">
+      <img src="assets/img/ex.jpg" alt="Profile">
     </div>
   </div>
 </div>
               <div class="social-links animate-on-load anim-fade-up delay-5">
-                <a href="https://www.behance.net/raihandesign1/" target="_blank" title="Behance"><i class="bi bi-behance"></i></a>
+                <a href="https://www.behance.net/raihandesign1/" target="_blank" title="Behance"><i class="bi bi-behance anim slide-left"></i></a>
                 <a href="https://www.instagram.com/raihan.design_/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="https://wa.me/6285855444927" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://wa.me/6285855444927" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp anim slide-right"></i></a>
               </div>
 
               <div class="hero-cta-buttons">
@@ -1235,7 +1235,7 @@ setTimeout(() => {
         <div class="row gy-4 justify-content-center">
           
           <!-- Stat Item 1 -->
-          <div class="col-lg-4 col-md-6 anim slide-right">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="stat-card animate-float delay-1">
               <div class="stat-icon anim slide-right">
                 <i class="bi bi-folder-check"></i>
@@ -1248,12 +1248,12 @@ setTimeout(() => {
           </div>
 
           <!-- Stat Item 2 -->
-          <div class="col-lg-4 col-md-6 anim slide-right">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="stat-card animate-float delay-2">
               <div class="stat-icon anim fade-in">
                 <i class="bi bi-clock-history"></i>
               </div>
-              <div class="stat-content anim slide-left">
+              <div class="stat-content anik fade-in">
                 <h3 class="stat-number">1+</h3>
                 <p class="stat-label">Year Experience</p>
               </div>
@@ -1261,12 +1261,12 @@ setTimeout(() => {
           </div>
 
           <!-- Stat Item 3 -->
-          <div class="col-lg-4 col-md-6 anim slide-right">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="stat-card animate-float delay-3">
               <div class="stat-icon anim slide-left">
                 <i class="bi bi-emoji-smile"></i>
               </div>
-              <div class="stat-content anim slide-left">
+              <div class="stat-content anim slide-right">
                 <h3 class="stat-number">10+</h3>
                 <p class="stat-label">Personal Clients</p>
               </div>
@@ -1465,6 +1465,145 @@ setTimeout(() => {
     }
 
     /* ===== ABOUT SECTION ===== */
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .abt-section {
+    padding: 50px 24px !important;
+  }
+
+  .abt-container {
+    flex-direction: column !important;
+    text-align: left !important;
+    gap: 40px !important;
+  }
+
+  /* Heading */
+  .abt-heading {
+    font-size: 2.2rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Description */
+  .abt-desc {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 30px !important;
+  }
+
+  /* Connect Section - 2 KOLOM */
+  .abt-connect-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 18px !important;
+  }
+
+  .abt-connect-grid {
+    grid-template-columns: 1fr 1fr !important;  /* ← KUNCI: 2 kolom */
+    gap: 10px 16px !important;                  /* gap vertikal 10px, horizontal 16px */
+  }
+
+  .abt-connect-item {
+    font-size: 0.82rem !important;              /* font lebih kecil agar muat 2 kolom */
+    padding: 6px 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  .abt-connect-item i {
+    font-size: 0.85rem !important;
+    width: 18px !important;
+    flex-shrink: 0 !important;                  /* icon tidak mengecil */
+  }
+
+  .abt-connect-item span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* 3D Card */
+  .abt-visual-col {
+    flex: none !important;
+    width: 100% !important;
+    margin: 20px 0 40px !important;
+    perspective: 1000px !important;
+  }
+
+  .abt-card-scene {
+    width: 220px !important;
+    height: 290px !important;
+    margin: 0 auto !important;
+  }
+
+  .abt-card-3d {
+    animation-duration: 16s !important;
+  }
+
+  .abt-photo-area {
+    width: 140px !important;
+    height: 190px !important;
+  }
+
+  .abt-dots span:nth-child(1) {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .abt-dots span:nth-child(2) {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .abt-dots span:nth-child(3) {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .abt-dots {
+    gap: 18px !important;
+    right: 14px !important;
+  }
+
+  /* Bottom Cards */
+  .abt-bottom-row {
+    flex-direction: column !important;
+    gap: 16px !important;
+    margin-top: 40px !important;
+  }
+
+  .abt-info-card {
+    padding: 24px 20px !important;
+  }
+
+  .abt-info-card h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .abt-info-card p {
+    font-size: 0.95rem !important;
+  }
+
+  .abt-info-card .abt-sub-text {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ===== VERY SMALL SCREENS (≤ 380px) ===== */
+@media (max-width: 380px) {
+  .abt-connect-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px 10px !important;
+  }
+
+  .abt-connect-item {
+    font-size: 0.75rem !important;
+  }
+
+  .abt-connect-item i {
+    font-size: 0.75rem !important;
+    width: 16px !important;
+  }
+  }
+  
     .abt-section {
       min-height: 100vh;
       background: #0a0a0a;
@@ -1753,143 +1892,17 @@ setTimeout(() => {
       opacity: 1;
       transform: translateY(0);
     }
-/* ===== MOBILE OPTIMIZATION ===== */
-@media (max-width: 768px) {
-  .abt-section {
-    padding: 50px 24px !important;
-  }
 
-  .abt-container {
-    flex-direction: column !important;
-    text-align: left !important;
-    gap: 40px !important;
-  }
-
-  /* Heading */
-  .abt-heading {
-    font-size: 2.2rem !important;
-    margin-bottom: 20px !important;
-  }
-
-  /* Description */
-  .abt-desc {
-    font-size: 0.95rem !important;
-    line-height: 1.7 !important;
-    margin-bottom: 30px !important;
-  }
-
-  /* Connect Section - 2 KOLOM */
-  .abt-connect-title {
-    font-size: 1.3rem !important;
-    margin-bottom: 18px !important;
-  }
-
-  .abt-connect-grid {
-    grid-template-columns: 1fr 1fr !important;  /* ← KUNCI: 2 kolom */
-    gap: 10px 16px !important;                  /* gap vertikal 10px, horizontal 16px */
-  }
-
-  .abt-connect-item {
-    font-size: 0.82rem !important;              /* font lebih kecil agar muat 2 kolom */
-    padding: 6px 0 !important;
-    line-height: 1.3 !important;
-  }
-
-  .abt-connect-item i {
-    font-size: 0.85rem !important;
-    width: 18px !important;
-    flex-shrink: 0 !important;                  /* icon tidak mengecil */
-  }
-
-  .abt-connect-item span {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  /* 3D Card */
-  .abt-visual-col {
-    flex: none !important;
-    width: 100% !important;
-    margin: 20px 0 40px !important;
-    perspective: 1000px !important;
-  }
-
-  .abt-card-scene {
-    width: 220px !important;
-    height: 290px !important;
-    margin: 0 auto !important;
-  }
-
-  .abt-card-3d {
-    animation-duration: 16s !important;
-  }
-
-  .abt-photo-area {
-    width: 140px !important;
-    height: 190px !important;
-  }
-
-  .abt-dots span:nth-child(1) {
-    width: 18px !important;
-    height: 18px !important;
-  }
-
-  .abt-dots span:nth-child(2) {
-    width: 15px !important;
-    height: 15px !important;
-  }
-
-  .abt-dots span:nth-child(3) {
-    width: 12px !important;
-    height: 12px !important;
-  }
-
-  .abt-dots {
-    gap: 18px !important;
-    right: 14px !important;
-  }
-
-  /* Bottom Cards */
-  .abt-bottom-row {
-    flex-direction: column !important;
-    gap: 16px !important;
-    margin-top: 40px !important;
-  }
-
-  .abt-info-card {
-    padding: 24px 20px !important;
-  }
-
-  .abt-info-card h3 {
-    font-size: 1.1rem !important;
-  }
-
-  .abt-info-card p {
-    font-size: 0.95rem !important;
-  }
-
-  .abt-info-card .abt-sub-text {
-    font-size: 0.8rem !important;
-  }
-}
-
-/* ===== VERY SMALL SCREENS (≤ 380px) ===== */
-@media (max-width: 380px) {
-  .abt-connect-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 8px 10px !important;
-  }
-
-  .abt-connect-item {
-    font-size: 0.75rem !important;
-  }
-
-  .abt-connect-item i {
-    font-size: 0.75rem !important;
-    width: 16px !important;
-  }
-  }
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .abt-section { padding: 60px 30px; }
+      .abt-container { flex-direction: column; text-align: center; }
+      .abt-text-col { max-width: 100%; }
+      .abt-connect-grid { grid-template-columns: 1fr; text-align: left; }
+      .abt-visual-col { flex: none; margin-bottom: 40px; }
+      .abt-bottom-row { flex-direction: column; }
+      .abt-heading { font-size: 2.4rem; }
+    }
   </style>
 </head>
 <body>
@@ -1900,7 +1913,7 @@ setTimeout(() => {
 
       <!-- Left Column: Text Content -->
       <div class="abt-text-col abt-reveal anim slide-right">
-        <h1 class="abt-heading anim slide-right">About</h1>
+        <h1 class="abt-heading anim">About</h1>
         <p class="abt-desc anim slide-right">
           I'm <span class="abt-highlight anim slide-right">Rayhan Edge</span>, a Visual Communication Design
           student passionate about graphic design, 3D visualization, branding, and motion graphics.
@@ -2020,57 +2033,6 @@ setTimeout(() => {
     });
   </script>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title anim slide-left">
-        <h2>Skills</h2>
-        <p></p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-12">
-
-            <div class="progress animate-float delay-2">
-              <span class="skill"><span>Sport Design</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap anim slide-left">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <!--<div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          <!--  <div class="progress">
-              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
 <style>
   
     /* ===== RESET & BASE ===== */
@@ -2085,7 +2047,7 @@ setTimeout(() => {
     :root {
       --bg-primary: #060b06;
       --text-primary: #f0f0f0;
-      --text-secondary: #797979;
+      --text-secondary: #7b7777;
       --accent: #ffffff;
       --timeline-track: rgba(255, 255, 255, 0.08); /* Warna garis latar yang redup */
       --glow: rgba(100, 180, 100, 0.06);
@@ -2393,25 +2355,27 @@ setTimeout(() => {
   <!-- Experience Section -->
   <section class="res-section" id="res">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        </div><!-- End Section Title -->
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2 class="section-title animate-float anim slide-right" data-animate>Resume</h2>
+    </div>
 
     <!-- Timeline -->
     <div class="timeline" id="timeline">
       <!-- Garis yang akan mengalir (Fill) -->
       <div class="timeline-line-fill" id="timelineFill"></div>
 
-      <!-- Item 1 -->
+<!-- Item 1 -->
       <div class="timeline-item" data-animate>
         <div class="timeline-dot"></div>
         <div class="timeline-content anim slide-right">
-          <p class="timeline-date">2016 — 2022</p>
-          <h3 class="timeline-title">SDN 2 Penganjuran</h3>
-          <p class="timeline-subtitle">Kec. Penganjuran</p>
+          <p class="timeline-date">2024 — 2025</p>
+          <h3 class="timeline-title">Freelance Software Engineer &amp; UI/UX Designer</h3>
+          <p class="timeline-subtitle">Remote</p>
           <p class="timeline-description">
-early development, not yet interested in the world of design and technology
+            Design and build high-performance websites and web apps for clients. I handle every
+            stage of the design process — from UX research and wireframing to UI design, front-end
+            development, and deployment — delivering polished, production-ready digital products.
           </p>
         </div>
       </div>
@@ -2420,10 +2384,13 @@ early development, not yet interested in the world of design and technology
       <div class="timeline-item" data-animate>
         <div class="timeline-dot"></div>
         <div class="timeline-content anim slide-left">
-          <p class="timeline-date">2022 — 2025</p>
-          <h3 class="timeline-title">SMPN 1 Banyuwangi</h3>
-          <p class="timeline-subtitle">Kec. Taman Baru</p>
-          <p class="timeline-description">the beginning of interest in the world of digital sports design and branding, joining the simple buying and selling and design community
+          <p class="timeline-date">2024 — 2024</p>
+          <h3 class="timeline-title">Frontend Developer Internship</h3>
+          <p class="timeline-subtitle">Remote — Houston, Texas USA</p>
+          <p class="timeline-description">
+            Contributed to the development of responsive web interfaces using modern frameworks.
+            Collaborated with cross-functional teams to translate design mockups into clean,
+            maintainable code. Gained hands-on experience with agile workflows and version control.
           </p>
         </div>
       </div>
@@ -2432,11 +2399,13 @@ early development, not yet interested in the world of design and technology
       <div class="timeline-item" data-animate>
         <div class="timeline-dot"></div>
         <div class="timeline-content anim slide-right">
-          <p class="timeline-date">2025 — Present</p>
-          <h3 class="timeline-title">SMK PGRI 1 Giri Banyuwangi</h3>
-          <p class="timeline-subtitle">Kec. Giri - Cungking</p>
+          <p class="timeline-date">2023 — 2024</p>
+          <h3 class="timeline-title">Bachelor of Science in Computer Science</h3>
+          <p class="timeline-subtitle">Bath University — Bath, England</p>
           <p class="timeline-description">
-Choose the TKJ major according to your interests and desires from the start of junior high school
+            Studied core computer science principles including algorithms, data structures, software
+            engineering, and systems design. Completed coursework in web technologies, databases,
+            and machine learning, building a strong foundation for professional development.
           </p>
         </div>
       </div>
@@ -2460,8 +2429,8 @@ Design and build high-performance matchday poster and feed for clients. I handle
       <div class="timeline-item" data-animate>
         <div class="timeline-dot"></div>
         <div class="timeline-content anim slide-right">
-          <p class="timeline-date">2024 — Present</p>
-          <h3 class="timeline-title">Create Design Class</h3>
+          <p class="timeline-date">2025 — Present</p>
+          <h3 class="timeline-title">Open Design Class</h3>
           <p class="timeline-subtitle">Visual Works ID</p>
           <p class="timeline-description">
             Guided students through matchday designing concepts.
@@ -2534,7 +2503,58 @@ Design and build high-performance matchday poster and feed for clients. I handle
     updateTimelineProgress();
   </script>
 
-      
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <!-- Section Title -->
+      <div class="container section-title anim slide-left">
+        <h2>Skills</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-12">
+
+            <div class="progress animate-float delay-2">
+              <span class="skill"><span>Sport Design</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap anim slide-left">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <!--<div class="progress">
+              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          <!--  <div class="progress">
+              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+
 
   <script src="gallery.js"></script>
 </body>
@@ -2619,7 +2639,7 @@ Design and build high-performance matchday poster and feed for clients. I handle
 
 
     
-<!-- Services Section -->
+ <!-- Services Section -->
 <section id="services" class="services section">
 
   <!-- Section Title -->
@@ -2732,16 +2752,6 @@ Design and build high-performance matchday poster and feed for clients. I handle
   <a href="#contact" class="btn-order-now">Order Now</a>
 </div><!-- /sTombol Order Now -->
 
-     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="anim slide-left">Testimonials</h2>
-         </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="swiper init-swiper">
           <script type="application/json" class="swiper-config">
             {
@@ -2758,64 +2768,6 @@ Design and build high-performance matchday poster and feed for clients. I handle
               }
             }
           </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Proin iaculis purus consequat sem cure digni ssim donec.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Anthony Rouault</h3>
-                      <h4>Rennais (2025)</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/ion.jpeg" class="img-fluid testimonial-img animate-float delay-1" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>“Literally Good, I love the retouch detail.”</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Paul Wanner</h3>
-                      <h4>PSV (2025)</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/Paul Wanner.jpg" class="img-fluid testimonial-img animate-float delay-2" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -2835,7 +2787,7 @@ Design and build high-performance matchday poster and feed for clients. I handle
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Address</h3>
-                <p>Mulyoasri Kec. Penganjuran, Banyuwangi </p>
+                <p>Kec. Penganjuran, Banyuwangi </p>
               </div>
             </div><!-- End Info Item -->
 
